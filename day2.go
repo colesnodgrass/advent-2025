@@ -90,7 +90,7 @@ func invalid(s string, numParts int) bool {
 				return false
 			}
 		}
-		// if we made it here, it means each part was each to each other part, so invalid id (s)
+		// if we made it here, it means each part was equal to each other part, so invalid id (s)
 		return true
 	}
 
