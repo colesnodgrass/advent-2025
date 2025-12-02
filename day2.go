@@ -63,7 +63,7 @@ func day2b() {
 
 			// convert to string for manipulation
 			strI := strconv.Itoa(i)
-			// attempt to split string into parts equal upto it's length
+			// attempt to split string into parts equal upto its length
 			for j := 2; j <= len(strI); j++ {
 				if invalid(strI, j) {
 					count += i
