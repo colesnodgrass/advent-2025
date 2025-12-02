@@ -77,6 +77,7 @@ func day2b() {
 }
 
 func invalid(s string, numParts int) bool {
+	// if s can't be split into equal parts, it must be valid
 	if len(s) >= numParts && len(s)%numParts == 0 {
 		size := len(s) / numParts
 		var parts []string
@@ -84,10 +85,12 @@ func invalid(s string, numParts int) bool {
 			parts = append(parts, s[i:i+size])
 		}
 		for i := 1; i < len(parts); i++ {
+			// if any part is not equal to the first part, this is valid, so return false
 			if parts[0] != parts[i] {
 				return false
 			}
 		}
+		// if we made it here, it means each part was each to each other part, so invalid id (s)
 		return true
 	}
 
