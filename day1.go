@@ -2,22 +2,17 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"strconv"
 	"strings"
 )
 
 const (
-	day1InputFile     = "data/day1.txt"
-	day1InputFileTest = "data/day1-test.txt"
+	day1InputFile     = "day1.txt"
+	day1InputFileTest = "day1-test.txt"
 )
 
 func day01a() {
-	inputBytes, err := os.ReadFile(day1InputFile)
-	if err != nil {
-		panic(err)
-	}
-	input := string(inputBytes)
+	input := mustReadFile(day1InputFile)
 
 	zeroCount := 0
 	pos := 50
@@ -55,11 +50,7 @@ func day01a() {
 }
 
 func day01b() {
-	inputBytes, err := os.ReadFile(day1InputFile)
-	if err != nil {
-		panic(err)
-	}
-	input := string(inputBytes)
+	input := mustReadFile(day1InputFile)
 
 	zeroCount := 0
 	pos := 50
