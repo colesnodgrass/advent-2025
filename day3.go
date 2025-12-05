@@ -41,10 +41,13 @@ func day3a() {
 }
 
 func day3b() {
-	input := mustReadFile("day3.txt")
-	lines := strings.Split(input, "\n")
+	//input := mustReadFile("day3.txt")
+	//lines := strings.Split(input, "\n")
 
 	total := 0
+	lines := []string{
+		"1112121122222223222222222222112242222232323212322222213112322622222132213212123253423222223242122232",
+	}
 	for _, line := range lines {
 		result := ""
 		start := 0

@@ -14,9 +14,17 @@ func main() {
 	//day2a()
 	//day2b()
 
-	fmt.Println("day03:")
-	day3a()
-	day3b()
+	//fmt.Println("day03:")
+	//day3a()
+	//day3b()
+
+	//fmt.Println("day04:")
+	//day4a()
+	//day4b()
+
+	fmt.Println("day05:")
+	day5a()
+	day5b()
 }
 
 func mustReadFile(file string) string {
