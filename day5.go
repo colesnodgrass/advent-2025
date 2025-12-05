@@ -56,6 +56,7 @@ func day5b() {
 		limits := strings.Split(line, "-")
 		start, _ := strconv.Atoi(limits[0])
 		end, _ := strconv.Atoi(limits[1])
+		end++ // end is inclusive
 		unique[start]++
 		unique[end]--
 
@@ -86,9 +87,9 @@ func day5b() {
 			rangeStart = e.id
 		} else if wasInRange && !isInRange {
 			// hit end of range, count the difference
-			total += e.id - rangeStart + 1 // +1 as the range is inclusive
+			total += e.id - rangeStart
 		}
 	}
 
-	fmt.Println(count, total)
+	fmt.Println(total)
 }
