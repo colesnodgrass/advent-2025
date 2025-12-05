@@ -61,6 +61,7 @@ func day5b() {
 		unique[end]--
 
 	}
+	// line sweep
 	var events []event
 	for id, count := range unique {
 		if count == 0 {
